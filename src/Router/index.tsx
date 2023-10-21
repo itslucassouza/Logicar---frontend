@@ -1,7 +1,6 @@
 import { Routes, Route,BrowserRouter } from "react-router-dom"
 import { AuthGuard } from "./AuthGuard"
 import { Login } from "../view/pages/Login"
-import { Register } from "../view/pages/Register"
 import { AuthLayout } from "../view/layouts/AuthLayout"
 import { Cars } from "../view/pages/Cars"
 import Dashboard from "../view/pages/Dashboard"

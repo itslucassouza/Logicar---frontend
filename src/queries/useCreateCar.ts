@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useMutation, UseMutationOptions } from '@tanstack/react-query';
 
 interface createCarProps {
     conductorName: string
@@ -18,8 +17,3 @@ export const createCar = async (newCarData: createCarProps) => {
   }
 };
 
-export const useCreateCar = () => {
-    const createCarMutation = useMutation((newCarData: Promise<createCarProps>) => createCar(newCarData)) as UseMutationOptions;
-
-  return createCarMutation;
-};

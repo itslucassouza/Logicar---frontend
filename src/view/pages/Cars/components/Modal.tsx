@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useQueryClient } from '@tanstack/react-query'
-import { createCar, useCreateCar } from "../../../../queries/useCreateCar";
+import { createCar } from "../../../../queries/useCreateCar";
 import { ErrorMessage } from "../../../../components/error-message";
 
 export const Modal = ({ open, handleClose }: any) => {
@@ -31,7 +31,7 @@ export const Modal = ({ open, handleClose }: any) => {
             parkingId: "dceb2337-42e0-4a69-bc92-d18e392191a2",
         }
 
-        createCar(format).then((dataResult) => {
+        createCar(format).then(() => {
             queryClient.invalidateQueries({ queryKey: ['carData'] }).then(() => {
                 handleCancel()
             })

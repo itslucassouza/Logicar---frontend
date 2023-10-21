@@ -8,7 +8,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const {data} = useDashboardData()
   const [isOpen, setIsOpen] = useState<any>(false);
-  const { user, login, logout } = useUser();
+  const { user } = useUser();
 
   useEffect(() => {
     if(user.loggedIn == false) {

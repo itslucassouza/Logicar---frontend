@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useQueryClient } from '@tanstack/react-query'
-import { createCar, useCreateCar } from "../../../../queries/useCreateCar";
 import { updateTransaction } from "../../../../queries/exitCar";
 import { ErrorMessage } from "../../../../components/error-message";
 

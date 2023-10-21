@@ -192,7 +192,7 @@ const Sidebar: FC<SidebarProps> = ({ setExpand }) => {
           role="button"
           tabIndex={0}
           id={item.id}
-          onClick={(e) => {
+          onClick={() => {
             navigate(item.link)
             if ("child" in item) {
               handleToggle(item.name);

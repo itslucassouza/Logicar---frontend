@@ -17,7 +17,7 @@ const fetchDashboardData = async () => {
   
   export const useDashboardData = () => {
   
-    const { isPending, error, data } = useQuery({
+    const { error, data } = useQuery({
         queryKey: ['dashboardData'],
         queryFn: () => fetchDashboardData()
       })

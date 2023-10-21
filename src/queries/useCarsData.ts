@@ -15,7 +15,7 @@ const fetchCarsData = async () => {
   };
   
   export const useCarsData = () => {
-    const { isPending, error, data } = useQuery({
+    const { error, data } = useQuery({
         queryKey: ['carData'],
         queryFn: () => fetchCarsData()
       })

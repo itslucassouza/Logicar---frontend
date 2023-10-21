@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useMutation, UseMutationOptions } from '@tanstack/react-query';
 
 interface createCarProps {
     plate: string

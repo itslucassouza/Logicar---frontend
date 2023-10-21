@@ -10,7 +10,7 @@ export function Login() {
     password: ""
   });
 
-  const { user, login, logout } = useUser();
+  const { login, logout } = useUser();
 
   useEffect(() => {
     logout()
