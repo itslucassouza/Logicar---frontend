@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_URL } from "../api/api";
 
 interface signinProps {
     name: string,
@@ -6,11 +7,15 @@ interface signinProps {
 }
 
 export const signin = async (signinData: signinProps) => {
-  try {
-    const response = await axios.post(`https://logicar-api.onrender.com/users/signin`, signinData);
+    try {
+        if (!API_URL) {
+            throw new Error("A variável de ambiente VITE_API_URL não está definida.");
+        }
 
-    return response.data; 
-  } catch (error) {
-    throw error; 
-  }
+        const response = await axios.post(`${API_URL}/users/signin`, signinData);
+
+        return response.data; 
+    } catch (error) {
+        throw error; 
+    }
 };

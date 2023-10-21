@@ -42,16 +42,38 @@ const Dashboard = () => {
             </button>
           </section>
           <section className="flex gap-3  ">
-            <div className="shadow-md flex-1 p-3 bg-[#474A4F]">
-                <p className="text-white">
-                Vagas Disponíveis: {data?.availableVancacies}
-                </p>
+
+          <div className="relative rounded-xl  bg-[#474A4F] flex flex-col mt-6 text-gray-700 bg-white shadow-md w-96 rounded-xl">
+            <div className="p-6 bg-[#474A4F] text-white rounded-xl  bg-[#474A4F]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#339AF0" aria-hidden="true" className="w-12 h-12 mb-4 text-pink-500">
+            <path d="M10.293 15.293l-2.647-2.647a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 00-1.414-1.414l-6.293 6.293a1 1 0 01-1.414 0z"/>
+          </svg>
+
+              <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+              Vagas Disponíveis
+              </h5>
+            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            {data?.availableVancacies}
+
+              </h5>
             </div>
-            <div className="shadow-md flex-1 p-3 bg-[#474A4F]">
-                <p className="text-white">
-                Vagas Ocupadas: {data?.ativeCars?.length}
-                </p>
-            </div>
+          
+          </div>
+          <div className="relative  flex flex-col mt-6 text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
+          <div className="p-6 rounded-xl  text-white  bg-[#474A4F]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true" className="w-12 h-12 mb-4 text-pink-500">
+  <path d="M13.414 12l5.293-5.293a1 1 0 10-1.414-1.414L12 10.586 6.707 5.293a1 1 0 00-1.414 1.414L10.586 12l-5.293 5.293a1 1 0 001.414 1.414L12 13.414l5.293 5.293a1 1 0 001.414-1.414L13.414 12z"/>
+</svg>
+
+                  <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  Vagas Ocupadas
+                  </h5>
+                  <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  {data?.ativeCars?.length}
+                  </h5>
+                </div>
+          </div>
+       
           </section>
         </div>
       </div>
