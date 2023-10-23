@@ -11,7 +11,7 @@ export const updateTransaction = async (newCarData: createCarProps) => {
             throw new Error("A variável de ambiente VITE_API_URL não está definida.");
         }
 
-        const response = await axios.put(`${API_URL}/car/update-car`, newCarData);
+        const response = await axios.put(`${API_URL}/car/update-car/${newCarData}`);
 
         return response.data; // Retorna apenas os dados da resposta
     } catch (error) {

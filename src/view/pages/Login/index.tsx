@@ -2,9 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../../context/userContext";
 import { signin } from "../../../queries/SignIn";
 import { useEffect, useState } from 'react'; // Importe o useState para gerenciar o estado
+import { ErrorMessage } from "../../../components/error-message";
 
 export function Login() {
   const navigate = useNavigate()
+  const [isAvailable, setIsAvaileble] = useState(false)
   const [signinData, setSigninData] = useState({ // Corrija a inicialização do estado
     nome: "",
     password: ""
@@ -23,10 +25,13 @@ export function Login() {
       password: parseInt(signinData.password)
     }
 
+    setIsAvaileble(true)
+
     // @ts-ignore
     signin(format).then((data) => {
       login(data.nome)
       navigate('/dashboard')
+      setIsAvaileble(false)
     })
   }
 
@@ -92,6 +97,9 @@ export function Login() {
                         placeholder="Password"
                         style={{ transition: "all .15s ease" }}
                       />
+                      {isAvailable && (
+                        <ErrorMessage message="Aguardando Inicio da Api, isso pode demorar um pouco.." />
+                      )}
                     </div>
                     <div>
                       <label className="inline-flex items-center cursor-pointer">
@@ -113,6 +121,7 @@ export function Login() {
                         type="button"
                         style={{ transition: "all .15s ease" }}
                         onClick={handleSigning}
+                        disabled={isAvailable}
                       >
                         Entrar
                       </button>

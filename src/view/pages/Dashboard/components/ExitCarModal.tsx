@@ -35,6 +35,8 @@ export const ExitCarModal = ({ open, handleClose }: any) => {
       const onSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
+        console.log(formData, 'sadasd')
+
         // @ts-ignore
         updateTransaction(formData.plate).then((dataResult) => {
             queryClient.invalidateQueries({ queryKey: ['dashboardData'] }).then(() => {
