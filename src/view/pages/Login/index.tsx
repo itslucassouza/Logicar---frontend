@@ -60,7 +60,10 @@ export function Login() {
                 </div>
                 <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                   <div className="text-gray-500 text-center mb-3 font-bold">
-                    <small>faça login com suas credenciais</small>
+                    <small>faça login com suas credenciais</small><br />
+                    <small>Login: lucas souza</small><br />
+                    <small>Senha: 123</small><br />
+                    <small>Como estamos utilizando o render para hospedar nossa api, pode ser que ele demore um pouco para iniciar o servidor. caso não tenha sucesso no login atualize a pagina e tente novamente</small>
                   </div>
                   <form>
                     <div className="relative w-full mb-3">

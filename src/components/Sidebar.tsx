@@ -293,7 +293,7 @@ const Sidebar: FC<SidebarProps> = ({ setExpand }) => {
     <nav
       role="navigation"
       className={[
-        "border-r border-slate-100 shadow-sm absolute inset-y-0 left-0",
+        "border-r z-[9000] border-slate-100 shadow-sm absolute inset-y-0 left-0",
         "duration-300 ease-in-out md:fixed md:translate-x-0",
         `${
           isExpand
